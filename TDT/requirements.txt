@@ -1,0 +1,4 @@
+google-cloud-storage
+gremlinpython
+python-decouple
+Flask
