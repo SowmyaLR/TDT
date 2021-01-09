@@ -3,8 +3,8 @@ from google.cloud import storage
 import os
 import json
 
-from src.build_graph import BuildGraph
-from src.dao import GremlinSession
+from builder import GraphBuilder
+from dao import GremlinSession
 
 
 class TDT:
@@ -33,7 +33,7 @@ class TDT:
         for f in files:
             with open(f"{self.destination_folder}/" + f) as fp:
                 data = json.load(fp)
-                bg = BuildGraph(data)
+                bg = GraphBuilder(data)
                 bg.construct_graph()
                 self.gs.insert_vertices(bg.get_vertex())
                 self.gs.insert_edges(bg.get_edges())
@@ -41,4 +41,3 @@ class TDT:
     def load_json(self):
         self.download_files()
         self.read_file()
-

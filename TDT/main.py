@@ -1,7 +1,7 @@
 from flask import Flask, make_response
 import logging
 
-from src import TDT
+from service import TDT
 
 app = Flask(__name__)
 
