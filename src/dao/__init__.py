@@ -1,6 +1,5 @@
 from gremlin_python.driver import client, serializer
 from decouple import config
-import logging
 
 __author__ = "SowmyaLR"
 
@@ -25,14 +24,14 @@ class GremlinSession:
         for vertex in vertices:
             callback = self.gc.submitAsync(vertex)
             if callback.result() is not None:
-                logging.info("Inserted this vertex:\n{0}".format(callback.result().one()))
+                print("Inserted this vertex:\n{0}".format(callback.result().one()))
             else:
-                logging.info("Something went wrong with this query: {0}".format(vertex))
+                print("Something went wrong with this query: {0}".format(vertex))
 
     def insert_edges(self, edges):
         for edge in edges:
             callback = self.gc.submitAsync(edge)
             if callback.result() is not None:
-                logging.info("Inserted this edge:\n{0}".format(callback.result().one()))
+                print("Inserted this edge:\n{0}".format(callback.result().one()))
             else:
-                logging.info("Something went wrong with this query:\n{0}".format(edge))
+                print("Something went wrong with this query:\n{0}".format(edge))
