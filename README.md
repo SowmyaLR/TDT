@@ -7,12 +7,12 @@ Steps to run TDT app
 3. Install the requirements - <b> pip install -r requirements.txt </b>
 4. Create .env file and add the following env variables
     <ul>
-        <li>ENDPOINT</li>
-        <li>DATABASE</li>
-        <li>COLLECTION</li>
-        <li>PRIMARY_KEY</li>
-        <li>BUCKET_NAME</li>
-        <li>FOLDER_NAME</li>
+        <li>ENDPOINT=cosmosdb_host</li>
+        <li>DATABASE=database_name_used_in_cosmosdb</li>
+        <li>COLLECTION=collection_name_used_in_cosmosdb</li>
+        <li>PRIMARY_KEY=primary_key_of_cosmosdb</li>
+        <li>BUCKET_NAME=cloud_public_bucket_name</li>
+        <li>FOLDER_NAME=bucket_folder_name</li>
         <li>DESTINATION_FOLDER=graph_data</li>
     </ul>
 5. Run the command - <b> python3 main.py </b>
