@@ -47,6 +47,7 @@ class TDT:
                 os.remove(f"{self.destination_folder}/" + f)
 
     def load_json(self):
-        self.download_files()
-        self.dump_data()
-        self._remove_directory()
+        pass
+        # self.download_files()
+        # self.dump_data()
+        # self._remove_directory()
