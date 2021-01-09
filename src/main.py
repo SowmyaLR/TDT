@@ -1,7 +1,7 @@
 from flask import Flask, make_response
 import logging
 
-from src.service import TDT
+from service import TDT
 
 __author__ = "SowmyaLR"
 
