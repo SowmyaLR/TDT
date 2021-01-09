@@ -2,7 +2,13 @@ from gremlin_python.driver import client, serializer
 from decouple import config
 import logging
 
+__author__ = "SowmyaLR"
+
+
 class GremlinSession:
+    """
+    GremlinSession handles all the db operations.
+    """
     def __init__(self):
         self.endpoint = config("ENDPOINT")
         self.db = config("DATABASE")

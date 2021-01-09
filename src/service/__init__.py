@@ -6,6 +6,8 @@ import json
 from builder import GraphBuilder
 from dao import GremlinSession
 
+__author__ = "SowmyaLR"
+
 
 class TDT:
     def __init__(self):

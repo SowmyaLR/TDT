@@ -1,7 +1,12 @@
 from datetime import datetime
 
+__author__ = "SowmyaLR"
+
 
 class GraphBuilder:
+    """
+    GraphBuilder constructs the node and relationship from the json data
+    """
     def __init__(self, data):
         self.data = data
         self.relations = {}
