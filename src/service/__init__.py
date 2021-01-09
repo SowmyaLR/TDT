@@ -38,6 +38,13 @@ class TDT:
                 self.gs.insert_vertices(bg.get_vertex())
                 self.gs.insert_edges(bg.get_edges())
 
+    def _remove_directory(self):
+        files = os.listdir(f"./{self.destination_folder}")
+        for f in files:
+            if os.path.isfile(f"{self.destination_folder}/" + f):
+                os.remove(f"{self.destination_folder}/" + f)
+
     def load_json(self):
         self.download_files()
         self.read_file()
+        self._remove_directory()
