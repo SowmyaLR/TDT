@@ -30,7 +30,7 @@ class TDT:
                 file_name = blob.name.replace("/", "_")
                 blob.download_to_filename(self.destination_folder + "/" + file_name)
 
-    def read_file(self):
+    def dump_data(self):
         files = os.listdir(f"./{self.destination_folder}")
         for f in files:
             with open(f"{self.destination_folder}/" + f) as fp:
@@ -48,5 +48,5 @@ class TDT:
 
     def load_json(self):
         self.download_files()
-        self.read_file()
+        self.dump_data()
         self._remove_directory()
